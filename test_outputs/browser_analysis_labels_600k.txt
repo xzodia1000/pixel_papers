@@ -1,0 +1,9 @@
+Chrome
+Safari
+Internet Explorer
+Firefox
+Safari (iOS)
+Opera
+Other
+OviBrowser
+UCBrowser
