@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 
 
@@ -143,8 +144,20 @@ def task_5():
                 for i, doc in enumerate(docs):
                     st.markdown(f"**Document {i + 1}:** {doc}")
                 st.graphviz_chart(dot)
-        except Exception as _:
+
+                # Download the graph as a PDF file
+                # if st.button("Save as PDF"):
+                #     dot.render("tmp_graph", format="pdf")
+                #     file = open("tmp_graph.pdf", "rb")
+                #     st.download_button(
+                #         label="Download PDF",
+                #         data=file,
+                #         file_name="graph.pdf",
+                #         mime="application/octet-stream",
+                #     )
+        except Exception as e:
             st.error("An error occurred. Please try again. Check the UUIDs.")
+            st.error(e)
 
 
 def milliseconds_to_minutes(milliseconds):
