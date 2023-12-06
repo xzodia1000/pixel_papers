@@ -127,7 +127,7 @@ class DataReader:
         # Return the UUIDs and read times as separate arrays
         return top_readers["visitor_uuid"].values, top_readers["event_readtime"].values
 
-    def get_also_likes(self, doc_id):
+    def get_also_likes(self, doc_id, user_id):
         """
         For a given document, find other documents liked by the visitors of this document.
 
@@ -139,7 +139,7 @@ class DataReader:
         """
 
         visitors = self.get_visitors(
-            doc_id
+            doc_id, user_id
         )  # Get unique visitors for the given document
 
         # Filter the DataFrame for documents visited by these visitors, excluding the original doc_id
@@ -157,7 +157,7 @@ class DataReader:
 
         return top_docs.to_dict(orient="index")
 
-    def get_visitors(self, doc_id):
+    def get_visitors(self, doc_id, user_id):
         """
         Get the unique visitor UUIDs for a given document.
 
@@ -168,7 +168,9 @@ class DataReader:
             Series: A Series containing unique visitor UUIDs for the specified document.
         """
 
-        return self.df[self.df["subject_doc_id"] == doc_id][
+        return self.df[
+            (self.df["subject_doc_id"] == doc_id) & (self.df["visitor_uuid"] != user_id)
+        ][
             "visitor_uuid"
         ].unique()  # Return unique visitor UUIDs
 

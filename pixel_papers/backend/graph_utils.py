@@ -99,6 +99,9 @@ class GraphUtils:
         # Connect the new user to the input document
         dot.edge(self.truncate(user), self.truncate(input_doc))
 
+        # Unique visitors
+        unique_visitors = []
+
         # Add nodes and edges for the related documents and their visitors
         for doc_id, info in data.items():
             dot.node(
@@ -110,7 +113,10 @@ class GraphUtils:
             for visitor in info["unique_visitors"]:
                 dot.node(self.truncate(visitor), self.truncate(visitor), shape="box")
                 dot.edge(self.truncate(visitor), self.truncate(doc_id))
-                dot.edge(self.truncate(visitor), self.truncate(input_doc))
+
+                if visitor not in unique_visitors:
+                    unique_visitors.append(visitor)
+                    dot.edge(self.truncate(visitor), self.truncate(input_doc))
 
         # Render and view the graph
         return dot

@@ -4,70 +4,49 @@ digraph {
 	node [fontsize=10 height=0.5]
 	edge [arrowsize=0.5]
 	c026 [label=c026 color=green shape=circle style=filled]
-	6771 [label=6771 color=green shape=box style=filled]
-	6771 -> c026
-	"83f4" [label="83f4" shape=circle]
-	"05a1" [label="05a1" shape=box]
-	"05a1" -> "83f4"
-	"05a1" -> c026
-	f2da [label=f2da shape=box]
-	f2da -> "83f4"
-	f2da -> c026
-	c199 [label=c199 shape=box]
-	c199 -> "83f4"
+	c199 [label=c199 color=green shape=box style=filled]
 	c199 -> c026
-	"3d35" [label="3d35" shape=box]
-	"3d35" -> "83f4"
-	"3d35" -> c026
 	eb4b [label=eb4b shape=circle]
+	"3d35" [label="3d35" shape=box]
+	"3d35" -> eb4b
+	"3d35" -> c026
 	"05a1" [label="05a1" shape=box]
 	"05a1" -> eb4b
 	"05a1" -> c026
 	f2da [label=f2da shape=box]
 	f2da -> eb4b
 	f2da -> c026
-	c199 [label=c199 shape=box]
-	c199 -> eb4b
-	c199 -> c026
+	"83f4" [label="83f4" shape=circle]
 	"3d35" [label="3d35" shape=box]
-	"3d35" -> eb4b
-	"3d35" -> c026
+	"3d35" -> "83f4"
+	"05a1" [label="05a1" shape=box]
+	"05a1" -> "83f4"
+	f2da [label=f2da shape=box]
+	f2da -> "83f4"
 	"9b25" [label="9b25" shape=circle]
 	"05a1" [label="05a1" shape=box]
 	"05a1" -> "9b25"
-	"05a1" -> c026
 	f2da [label=f2da shape=box]
 	f2da -> "9b25"
-	f2da -> c026
-	c199 [label=c199 shape=box]
-	c199 -> "9b25"
-	c199 -> c026
-	4663 [label=4663 shape=circle]
-	c199 [label=c199 shape=box]
-	c199 -> 4663
-	c199 -> c026
-	e2ea [label=e2ea shape=circle]
+	8945 [label=8945 shape=circle]
 	"3d35" [label="3d35" shape=box]
-	"3d35" -> e2ea
-	"3d35" -> c026
+	"3d35" -> 8945
+	e29a [label=e29a shape=circle]
+	"3d35" [label="3d35" shape=box]
+	"3d35" -> e29a
 	c14b [label=c14b shape=circle]
 	"3d35" [label="3d35" shape=box]
 	"3d35" -> c14b
-	"3d35" -> c026
 	f83d [label=f83d shape=circle]
 	"3d35" [label="3d35" shape=box]
 	"3d35" -> f83d
-	"3d35" -> c026
 	"86f9" [label="86f9" shape=circle]
 	"3d35" [label="3d35" shape=box]
 	"3d35" -> "86f9"
-	"3d35" -> c026
 	6287 [label=6287 shape=circle]
 	"3d35" [label="3d35" shape=box]
 	"3d35" -> 6287
-	"3d35" -> c026
 	"88ff" [label="88ff" shape=circle]
 	"3d35" [label="3d35" shape=box]
 	"3d35" -> "88ff"
-	"3d35" -> c026
 }

@@ -34,12 +34,3 @@ def test_read_data_600k():
     df = dr.get_df()
 
     assert df.shape == (600000, 31)
-
-
-# def test_read_data_3m():
-#     dr = DataReader()
-
-#     dr.read_data("./datasets/sample_3m_lines.json")
-#     df = dr.get_df()
-
-#     assert df.shape == (3000000, 34)
