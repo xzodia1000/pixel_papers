@@ -202,6 +202,9 @@ class DataReader:
             str: The name of the browser identified from the user agent string, with specific checks for mobile browsers.
         """
 
+        if type(browser) is not str:
+            return "Other"
+
         user_agent = parse(browser)  # Parse the user agent string
 
         # Check for specific browser families and return a clean name
