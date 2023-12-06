@@ -135,7 +135,7 @@ def task_5():
     if st.button("Show Results"):
         try:
             docs, dot = st.session_state.builder.also_likes(
-                doc_uuid, user_uuid, render=False
+                doc_uuid, user_uuid if user_uuid != "" else "user", render=False
             )
             st.markdown("### Documents")
             if len(docs) == 0:
@@ -146,15 +146,12 @@ def task_5():
                 st.graphviz_chart(dot)
 
                 # Download the graph as a PDF file
-                # if st.button("Save as PDF"):
-                #     dot.render("tmp_graph", format="pdf")
-                #     file = open("tmp_graph.pdf", "rb")
-                #     st.download_button(
-                #         label="Download PDF",
-                #         data=file,
-                #         file_name="graph.pdf",
-                #         mime="application/octet-stream",
-                #     )
+                st.download_button(
+                    label="Save as .dot file",
+                    data=dot.source,
+                    file_name="graph.dot",
+                    mime="text/plain",
+                )
         except Exception as e:
             st.error("An error occurred. Please try again. Check the UUIDs.")
             st.error(e)
