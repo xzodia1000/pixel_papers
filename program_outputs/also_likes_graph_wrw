@@ -1,0 +1,9 @@
+// Also Likes Graph
+digraph {
+	graph [rankdir=TB size="8,5"]
+	node [fontsize=10 height=0.5]
+	edge [arrowsize=0.5]
+	wrw [label=wrw color=green shape=circle style=filled]
+	rwer [label=rwer color=green shape=box style=filled]
+	rwer -> wrw
+}

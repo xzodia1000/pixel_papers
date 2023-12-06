@@ -1,0 +1,25 @@
+digraph {
+	graph [bb="0,0,54,110.46",
+		rankdir=TB,
+		size="8,5"
+	];
+	node [fontsize=10,
+		height=0.5,
+		label="\N"
+	];
+	edge [arrowsize=0.5];
+	wrw	[color=green,
+		height=0.53417,
+		label=wrw,
+		pos="27,19.23",
+		shape=circle,
+		style=filled,
+		width=0.53417];
+	rwer	[color=green,
+		label=rwer,
+		pos="27,92.46",
+		shape=box,
+		style=filled,
+		width=0.75];
+	rwer -> wrw	[pos="e,27,38.811 27,74.217 27,65.52 27,54.809 27,45.226"];
+}

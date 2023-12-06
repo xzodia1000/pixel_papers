@@ -1,0 +1,18 @@
+digraph {
+	graph [bb="0,0,72,36",
+		rankdir=TB,
+		size="8,5"
+	];
+	node [fontsize=10,
+		height=0.5,
+		label="\N"
+	];
+	edge [arrowsize=0.5];
+	""	[color=green,
+		label="",
+		pos="27,18",
+		shape=box,
+		style=filled,
+		width=0.75];
+	"" -> ""	[pos="e,54.241,11.257 54.241,24.743 64.024,24.888 72,22.641 72,18 72,14.447 67.325,12.297 60.742,11.549"];
+}

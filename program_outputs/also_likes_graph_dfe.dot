@@ -1,0 +1,24 @@
+digraph {
+	graph [bb="0,0,54,108",
+		rankdir=TB,
+		size="8,5"
+	];
+	node [fontsize=10,
+		height=0.5,
+		label="\N"
+	];
+	edge [arrowsize=0.5];
+	dfe	[color=green,
+		label=dfe,
+		pos="27,18",
+		shape=circle,
+		style=filled,
+		width=0.5];
+	rer	[color=green,
+		label=rer,
+		pos="27,90",
+		shape=box,
+		style=filled,
+		width=0.75];
+	rer -> dfe	[pos="e,27,36.104 27,71.697 27,62.881 27,52.032 27,42.474"];
+}
